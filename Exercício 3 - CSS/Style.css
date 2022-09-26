@@ -1,0 +1,94 @@
+/*principal: Fonte Arial, negrito, itálico, tamanho 30px cor #280*/
+.principal{
+    font-family: Arial;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
+    color: #280;    
+}
+
+/* titulo: Fonte Arial, negrito, itálico, tamanho 15px, cor de fundo #FFF */
+.titulo{
+    font-family: Arial;
+    font-weight: bold;
+    font-style: italic; /*negrito*/
+    font-size: 15px;
+    background-color: #FFF;    
+}
+
+/* origem: Fonte Arial, negrito, tamanho 20px, cor de fonte #280, cor de fundo #FFF  */
+.origem{
+    font-family: Arial;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    color: #280;
+    background-color: #FFF;    
+}
+
+/* resumo: Fonte Arial, tamanho 12px, cor de fundo #FFF  */
+.resumo{
+    font-family: Arial;
+    font-size: 12px;
+    background-color: #FFF;    
+}
+
+/* rodape: Fonte Arial, negrito, tamanho 11px, texto centralizado, cor de fundo #CFB  */
+.rodape{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center ;
+    
+    background-color: #CFB;     
+    /*colspan="2" align="center" valign="center"*/
+}
+
+/*Tag <a> link: cor #0000FF | visited: cor #DDC71A | active: cor #AC0B44 | hover: cor #FF0000 | negrito*/
+a{
+    color: #0000FF;
+    font-weight: bold;    
+}
+a:visited{
+    color: #DDC71A;
+}
+a:active{
+    color: #AC0B44;
+}
+a:hover {
+    color: #FF0000;/*qnd tiver o mouse em cima fica dessa cor*/
+}
+
+
+
+/*tb1: com borda sólida, com espessura de 1px na cor preta, largura da tabela 766 pixel, 
+altura da tabela 36 pixel, cor de fundo da tabela #000033*/
+.tb1{
+    border: 1px solid black;
+    width: 766px; /*LARGURA*/
+    height: 36px;/*ALTURA*/
+    background-color: #000033;
+    /*box-shadow: 10px 20px grey; - faz "uma sombra"*/ 
+}
+
+
+
+/*Determine os tamanhos de fontes para os elementos com textos dentro do corpo das tags <h1>, <li> e <p>, 
+sendo que o h1 deve ser centralizado e as tags p e li devem ter um espaçamento de 2.*/
+h1{
+    text-align: center;    
+}
+p li{
+    text-align: center;
+    line-height: 2in;
+}
+
+/*Crie uma classe com o nome alinhado que define seus componentes com inline.*/
+.alinhado{
+    display: inline;
+}
+
+/*Crie uma classe com o nome bloco que define seus comentes como block.*/
+.bloco{
+    display: block;
+}

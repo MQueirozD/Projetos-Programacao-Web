@@ -1,0 +1,46 @@
+.nome{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 30px;
+    color: rgb(85, 79, 79);
+    
+}
+
+img{
+    border-radius: 18px;
+    height: 16%;
+    width: 16%;
+    float: left;
+    clear: left;
+}
+
+p{
+    font-size: 20px;
+    height: 80%;
+    width: 80%;
+    float: right;
+    line-height: normal;
+    
+}
+
+#neg{
+    font-weight: bold;
+    line-height: 2%;    
+}
+
+
+#info{
+    font-size: 20px;
+    width: 100%;
+    height: 40%;
+    clear: both;    
+}
+
+.img-logo{
+    width: 5%;
+    height: 5%;
+    /* float: none; */
+    clear: none;
+}
