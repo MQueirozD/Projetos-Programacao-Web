@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="  align-items-center justify-content-center">
+
+    </div class="pulaLinha">
+    <div class="container">
+        <div class="row">
+            <div class="align-items-center ">
+                <h5>1. Crie duas variáveis com o valor 10 e 100. Mostre o valor da soma, subtração, divisão e
+                    multiplicação em um ALERT.</h5>
+                <button onclick="soma()" class="tn btn-primary btn-lg m-3">SOMA</button>
+                <button onclick="sub()" class="tn btn-primary btn-lg m-3">SUBTRAÇÃO</button>
+                <button onclick="div()" class="tn btn-primary btn-lg m-3">DIVISÃO</button>
+                <button onclick="mult()" class="tn btn-primary btn-lg m-3">MULTIPLICAÇÃO</button>
+            </div>
+
+            <div class="pulaLinha">
+                <h5>2. Crie um loop que mostre na tela o valor de 10 a 100.</h5>
+                <!-- <input type="text" id="txtResultado"> -->
+                <div class="txtResultado"></div>
+                <button onclick="loop()" class="tn btn-primary btn-lg m-3">LOOP</button>
+            </div>
+
+            <div class="pulaLinha">
+                <h5>3. Crie uma variável que recebe o valor fixo 5. Mostre a tabuada desse número.</h5>
+                <p>Quer ver a tabuada do 5?</p>
+                <button onclick="tabuada5()" class="tn btn-primary btn-lg m-3">Mostrar tabela</button>
+                <br>
+                <div id='resultado' style='display:inline'></div>
+
+            </div>
+
+            <div>
+                <h5>4. Adapte o exercício anterior para o valor não ser mais fixo. O valor deve ser recebido de um campo
+                    da tela.</h5>
+                Qual tabuada deseja ver: <input id="num" type="number" class="form-control  col-3"> <br />
+                <button onclick="tabuada()" class="tn btn-primary btn-lg m-3">Exibir</button>
+                <div class="pulaLinha"></div>
+                <div id='resposta' style='display:inline'></div>
+
+            </div>
+
+            <div class="pulaLinha">
+                <h4>5. Fazer um calculadora que receberá dois valores e a operação (+,-,*,/). Ao clicar no botão
+                    calcular o resultado é demonstrado.</h4>
+                <h5>Primeiro Número</h5>
+                <input type="text" id="txtNum1" class=" col-6">
+                <h5>Segundo Número</h5>
+                <input type="text" id="txtNum2" class=" col-6">
+                <div>
+                    <button onclick="soma1()" class="tn btn-primary btn-lg m-3">+</button>
+                    <button onclick="sub1()" class="tn btn-primary btn-lg m-3">-</button>
+                    <button onclick="div1()" class="tn btn-primary btn-lg m-3">/</button>
+                    <button onclick="mult1()" class="tn btn-primary btn-lg m-3">X</button>
+                </div>
+                <div>
+                    Resultado é: <input type="text" id="calculadoraResultado" class="form-control  col-10">
+                </div>
+            </div>
+
+            <div class="pulaLinha">
+                <h5>6. Percorra o array [1,2,3,4,5,6,7,8,9,10] e exiba apenas os valores pares.</h5>
+                <button onclick="par()" class="tn btn-primary btn-lg m-3">Resultado</button>
+                <div>
+                    Os números pares são:
+                    <!-- <input type="text" id="resultadoPar" class="form-control  col-10"> -->
+                    <div id="resultadoPar" class="form-control  col-10"></div>
+                </div>
+            </div>
+            <div class="pulaLinha">
+                <h5>7. O custo de um carro novo ao consumidor é obtido com a seguinte fórmula:
+                    custo final = custo de fábrica + (custo de fábrica * percentual do distribuidor) +
+                    (custo de fábrica * percentual de impostos) <br>
+                    O usuário terá uma tela para entrar com os valores: <br>
+
+                    custo de fábrica => nome do input custoFabrica <br>
+                    % distribuidor => nome do input percDistribuidor <br>
+                    % impostos => nome do input percImpostos <br>
+                    Valor final => nome do input valorfinal <br>
+                    Deverá executar o cálculo e demonstrar o resultado no “valorfinal” quando clicar no botão
+                    “btncalcular”.</h5>
+
+                    
+                    <div class="pulaLinha">
+                        Custo de Fábrica
+                        <input type="text" id="custoFabrica">
+                    </div>
+                    <div class="pulaLinha">
+                        Distribuidor
+                        <input type="text" id="percDistribuidor">
+                    </div>
+                    <div class="pulaLinha">
+                        Impostos
+                        <input type="text" id="percImpostos">
+                    </div>
+                       
+                <button onclick="btncalcular()" class="tn btn-primary btn-lg m-3">calcular</button>
+                <div>
+                    Valor final: <input type="text" id="valorfinal" class="form-control  col-10">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- <input type="text" id="txtNum1" class="form-control col-6" placeholder="10">
+                <br>
+                <input type="text" id="txtNum2" class="form-control col-6">
+                <br>
+                <input type= "text" id="txtResultado" class="form-control  col-10"  > -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    ></script> -->
+
+    <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+</body>
+<script>
+    function soma() {
+        var num1 = 10;
+        var num2 = 100;
+        alert("SOMA: 10 + 100 = " + (parseFloat(num1) + parseFloat(num2)));
+    }
+    function sub() {
+        var num1 = 10;
+        var num2 = 100;
+        alert("SUBTRAÇÃO: 10 - 100 = " + (parseFloat(num1) - parseFloat(num2)));
+    }
+    function div() {
+        var num1 = 10;
+        var num2 = 100;
+        alert("DIVISÃO: 10 / 100 = " + (parseFloat(num1) / parseFloat(num2)));
+    }
+    function mult() {
+        var num1 = 10;
+        var num2 = 100;
+        alert("MULTIPLICAÇÃO: 10 X 100 = " + (parseFloat(num1) * parseFloat(num2)));
+    }  
+</script>
+
+<script>
+    // <h5>2. Crie um loop que mostre na tela o valor de 10 a 100.</h5>
+    //             <input type="text" id="txtResultado">
+    //             <button onclick="loop()" class="tn btn-primary btn-lg m-3">LOOP</button>
+    function loop() {
+        // var txtResultado = document.getElementById('txtResultado');
+        // var n = '';
+        // for (var i = 1; i <= 10; i++) {
+        //         n += n + i + "<br />";
+
+        //         txtResultado.innerHTML = n;
+        //     }
+        for (i = 10; i < 100; i++) {
+            // document.getElementById('txtResultado').parseInt(i);
+        txtResultado.innerHTML = n;
+        }
+    }
+</script>
+
+<script>
+    function tabuada5() {
+        var i;
+        var tab5 = 5;
+        var resultado = document.getElementById('resultado');
+        var tabuada5 = '';
+        for (i = 1; i <= 10; i++) {
+            // alert('calculadoraResultado' + parseFloat(tab5) * parseFloat(i) );           
+            tabuada5 += tab5 + " x " + i + " = " + tab5 * i + "<br />";
+
+            resultado.innerHTML = tabuada5;
+        }
+    }
+</script>
+
+<script>
+    function tabuada() {
+        var num = parseInt(document.getElementById("num").value);
+        var resposta = document.getElementById('resposta');
+        var tabuada = '';
+
+        for (var count = 1; count <= 10; count++)
+            tabuada += num + " x " + count + " = " +
+                num * count + "<br />";
+
+        resposta.innerHTML = tabuada;
+    }
+</script>
+
+<script>
+    function soma1() {
+        var num1 = document.getElementById('txtNum1');
+        var num2 = document.getElementById('txtNum2');
+        document.getElementById('calculadoraResultado').value = parseFloat(num1.value) + parseFloat(num2.value);
+    }
+    function sub1() {
+        var num1 = document.getElementById('txtNum1');
+        var num2 = document.getElementById('txtNum2');
+        document.getElementById('calculadoraResultado').value = parseFloat(num1.value) - parseFloat(num2.value);
+    }
+    function div1() {
+        var num1 = document.getElementById('txtNum1');
+        var num2 = document.getElementById('txtNum2');
+        document.getElementById('calculadoraResultado').value = parseFloat(num1.value) / parseFloat(num2.value);
+    }
+    function mult1() {
+        var num1 = document.getElementById('txtNum1');
+        var num2 = document.getElementById('txtNum2');
+        document.getElementById('calculadoraResultado').value = parseFloat(num1.value) * parseFloat(num2.value);
+    }
+
+</script>
+
+<script>
+    // 6. Percorra o array [1,2,3,4,5,6,7,8,9,10] e exiba apenas os valores pares.
+
+    function par() {
+        var resultadoPar = document.getElementById('resultadoPar');
+        var par = [1,2,3,4,5,6,7,8,9,10];
+        // for (var i = 1; i <= 10; i++) {
+        //     if (i % 2 == 0) {
+        //         document.getElementById('nPares')
+        //         par += par + i + "<br />";
+        //         resultadoPar.innerHTML = par;
+        //     }
+        // }
+        if (par % 2 == 0) {
+                document.getElementById('nPares')
+                par += par + i + "<br />";
+                resultadoPar.innerHTML = par;
+            }
+    }
+
+</script>
+
+<script>
+    function btncalcular() {
+        var custoFabrica = document.getElementById('custoFabrica');
+        var percDistribuidor = document.getElementById('percDistribuidor');
+        var percImpostos = document.getElementById('percImpostos');
+        var valorfinal = document.getElementById('valorfinal');
+
+        document.getElementById('valorfinal').value = 
+        parseFloat(custoFabrica.value)  + (parseFloat(custoFabrica.value)* (parseFloat(percDistribuidor.value)/100)) +
+        (parseFloat(custoFabrica.value)* (parseFloat(percImpostos.value)/100));
+
+
+    }
+
+</script>
+
+</html>
