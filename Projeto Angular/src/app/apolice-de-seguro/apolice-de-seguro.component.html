@@ -1,0 +1,53 @@
+<!-- Crie um formulário de apólice para seguro automobilístico.
+ Para isso o consultor preencherá: Nome do segurado, o sexo, a idade e o valor do automóvel -->
+
+ <div class="pulaLinha">
+    <form>
+      <div class="form-group pulaLinha">
+        <label>Nome do segurado:</label>
+        <input
+          class="form-control"
+          name="nomeSegurado"
+          aria-describedby="emailHelp"
+          placeholder="Nome do segurado"
+          [(ngModel)]="nomeSegurado"
+          required
+        />
+      </div>
+      <div class="form-group pulaLinha">
+        <label >Sexo:</label>        
+        <select class="form-control" >
+            <option >... </option>
+            <option name="mulher" [(ngModel)]="mulher">Mulher</option>
+            <option name="homem" [(ngModel)]="homem">Homem</option>
+          </select>
+      </div>
+      <div class="form-group pulaLinha">
+        <label for="exampleInputEmail1">Idade:</label>
+        <input
+          class="form-control"
+          name="idade"
+          aria-describedby="emailHelp"
+          placeholder="Idade"
+          [(ngModel)]="idade"
+          required
+        />
+      </div>
+      <div class="form-group pulaLinha">
+        <label >Valor do Automóvel:</label>
+        <input
+          class="form-control"
+          name="valorAutomovel"
+          placeholder="Valor do Automóvel"
+          [(ngModel)]="valorAutomovel"
+          required
+          
+        />
+      </div>
+    
+      <div class="form-group form-check pulaLinha">      
+      
+      <button (click)="calcular()" class="btn btn-primary" >Calcular</button>
+    </div>
+    </form>
+    </div>

@@ -1,0 +1,32 @@
+
+<div class="row pulaLinha">
+        <div class="col-5">
+                <h5>Ecolha número 1</h5>
+                <input type="number" placeholder="Num1" name="num1" [(ngModel)]="num1">
+        </div>
+        <div class="col-5">
+                <h5>Ecolha número 2</h5>
+                <input type="number" placeholder="Num2" name="num2" [(ngModel)]="num2">
+        </div>
+</div>
+<div class="row pulaLinha">
+        <div class="col-3">
+                <button (click)="somar()" class="btn btn-light">Somar</button>
+        </div>
+        <div class="col-3">
+                <button (click)="subitair()" class="btn btn-light">Subitrair</button>
+        </div>
+        <div class="col-3">
+                <button (click)="dividir()" class="btn btn-light">Dividir</button>
+        </div>
+        <div class="col-3">
+                <button (click)="multiplicar()" class="btn btn-light">Multiplicar</button>
+        </div>
+</div>
+
+<div class="row pulaLinha">
+        <div class="col-5">
+                <h5>Resultado</h5>
+                <input type="number" placeholder="Resultado" name="resultado" [(ngModel)]="resultado">
+        </div>
+</div>

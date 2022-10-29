@@ -1,0 +1,60 @@
+<div class="pulaLinha">
+
+</div>
+
+<div class="row">
+    <div class="col-3 pulaLinha">
+        <h5>AC1</h5>
+        <input type="number" placeholder="AC1" name="ac1" [(ngModel)]="ac1">
+    </div>
+    <div class="col-3 pulaLinha">
+        <h5>AC2</h5>
+        <input type="number" placeholder="AC2" name="ac2" [(ngModel)]="ac2">
+    </div>
+    <div class="col-3 pulaLinha">
+        <h5>AG</h5>
+        <input type="number" placeholder="AG" name="ag" [(ngModel)]="ag">
+    </div>
+    <div class="col-3 pulaLinha">
+        <h5>AF</h5>
+        <input type="number" placeholder="AF" name="af" [(ngModel)]="af">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-4 pulaLinha">
+        <h4>Resultado</h4>
+        <input type="number" placeholder="Resultado" name="resultado" [(ngModel)]="resultado" readonly>          
+    </div>
+    <div class="col-4 pulaLinha">
+        <button (click)="calcular()" class="btn btn-secondary">Calcular</button>
+    </div>
+
+    <div class="col-3 pulaLinha">
+        <h4>Aluno:</h4>
+        <input type="text" name="alunoResultado" [(ngModel)]="alunoResultado" readonly>
+    </div>
+
+    
+    
+</div>
+
+<div class="row">
+    <div class="col-3 pulaLinha">
+        <h4>ResultadoAC1</h4>
+        <input type="number" placeholder="Resultado" name="resultadoAC1" [(ngModel)]="resultadoAC1">
+    </div>
+    <div class="col-3 pulaLinha">
+        <h4>ResultadoAC2</h4>
+        <input type="number" placeholder="Resultado" name="resultadoAC2" [(ngModel)]="resultadoAC2">
+    </div>
+    <div class="col-3 pulaLinha">
+        <h4>ResultadoAG</h4>
+        <input type="number" placeholder="Resultado" name="resultadoAG" [(ngModel)]="resultadoAG">
+    </div>
+    <div class="col-3 pulaLinha">
+        <h4>ResultadoAF</h4>
+        <input type="number" placeholder="Resultado" name="resultadoAF" [(ngModel)]="resultadoAF">
+    </div>
+</div>
