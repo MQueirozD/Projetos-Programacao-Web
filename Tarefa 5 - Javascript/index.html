@@ -40,6 +40,8 @@
                 <!-- <input type="text" id="txtResultado"> -->
                 <div class="txtResultado"></div>
                 <button onclick="loop()" class="tn btn-primary btn-lg m-3">LOOP</button>
+                <br>
+                <div id='resultadoLoop' style='display:inline'></div>
             </div>
 
             <div class="pulaLinha">
@@ -84,8 +86,8 @@
                 <button onclick="par()" class="tn btn-primary btn-lg m-3">Resultado</button>
                 <div>
                     Os números pares são:
-                    <!-- <input type="text" id="resultadoPar" class="form-control  col-10"> -->
-                    <div id="resultadoPar" class="form-control  col-10"></div>
+                    <br>                 
+                    <div id="resultadoPar" ></div>
                 </div>
             </div>
             <div class="pulaLinha">
@@ -172,21 +174,12 @@
 </script>
 
 <script>
-    // <h5>2. Crie um loop que mostre na tela o valor de 10 a 100.</h5>
-    //             <input type="text" id="txtResultado">
-    //             <button onclick="loop()" class="tn btn-primary btn-lg m-3">LOOP</button>
     function loop() {
-        // var txtResultado = document.getElementById('txtResultado');
-        // var n = '';
-        // for (var i = 1; i <= 10; i++) {
-        //         n += n + i + "<br />";
-
-        //         txtResultado.innerHTML = n;
-        //     }
-        for (i = 10; i < 100; i++) {
-            // document.getElementById('txtResultado').parseInt(i);
-        txtResultado.innerHTML = n;
-        }
+        var num = "";
+            for (var i = 10; i <= 100; i += 1) {
+                num += i + " - ";
+            }
+            resultadoLoop.innerHTML = (num);
     }
 </script>
 
@@ -244,23 +237,18 @@
 </script>
 
 <script>
-    // 6. Percorra o array [1,2,3,4,5,6,7,8,9,10] e exiba apenas os valores pares.
-
     function par() {
-        var resultadoPar = document.getElementById('resultadoPar');
-        var par = [1,2,3,4,5,6,7,8,9,10];
-        // for (var i = 1; i <= 10; i++) {
-        //     if (i % 2 == 0) {
-        //         document.getElementById('nPares')
-        //         par += par + i + "<br />";
-        //         resultadoPar.innerHTML = par;
-        //     }
-        // }
-        if (par % 2 == 0) {
-                document.getElementById('nPares')
-                par += par + i + "<br />";
-                resultadoPar.innerHTML = par;
+        var num = parseInt(document.getElementById("resultadoPar").value);
+            var resposta = document.getElementById('resultadoPar');
+            let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            let par = [];
+
+            for (let i = 1; i <= array.length; i++) {
+                if (i % 2 == 0) {
+                    par.push(i);
+                }
             }
+            resultadoPar.innerHTML = par;
     }
 
 </script>
