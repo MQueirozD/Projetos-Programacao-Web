@@ -16,9 +16,6 @@
 <body class="d-flex vw-100 vh-100 align-items-center justify-content-center">
     <div class="container">
         <div class="row">
-            <!-- <div class="col-md-10">
-                <input onkeyup="filtrar()" type="text" placeholder="Pesquisar..." id='pesquisar' class="form-control">
-            </div> -->
             <form id="form">
                 <div class="modal-body">
 
@@ -67,8 +64,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js">
     </script>
     <script>
-
-        var usuarios = [];        
+        var butotao = document.querySelector("btnSalvar")
+        var usuarios = []; 
+        var array = [];
+               
 
         document.addEventListener('DOMContentLoaded', function (e) {
             document.getElementById('form').addEventListener("submit", function (e) {
@@ -79,13 +78,15 @@
         });
 
         function salvarUsuario(event){
-            var salvar = [usuarios];
+            array.push(nome.value);
+            array.push(email.value);
+            array.push(telefone.value);
 
-            console.log(salvar)
+            alert("Salvo na array");
+            console.log(array);
         }
 
         function sincronizarUsuario(event) {
-
             //Transformar form em objeto json
             const myFormData = new FormData(event.target);
             const formDataObj = {};
@@ -100,12 +101,10 @@
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    // console.log('Success:', data);
                     alert('Sincronizado com sucesso!!');
                     location.reload();
                 })
                 .catch((error) => {
-                    // console.error('Error:', error);
                     alert('Erro ao sincronizar!!');
                 });
         }

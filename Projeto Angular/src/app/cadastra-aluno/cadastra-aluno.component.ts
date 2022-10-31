@@ -17,23 +17,24 @@ export class CadastraAlunoComponent implements OnInit {
   constructor(public route: ActivatedRoute) { }
 
   ngOnInit(): void {    
-    this.celular = this.route.snapshot.params['celular'] ?
-      parseFloat(this.route.snapshot.params['celular']) : 0;
+    this.ra = this.route.snapshot.params['ra'] ?? "";
+    this.nome = this.route.snapshot.params['nome'] ?? "";
+    this.email = this.route.snapshot.params['email'] ?? "";
+    this.celular = this.route.snapshot.params['celular'] ?? "";
   }
   
   enviar(){
 
-    // if(this.sexo = ("mulher")) {
-    //   alert('Mulher!!') 
-    // }
-    // else if (this.sexo = ("Homem")){
-    //   alert('Homem!')
-    // }
-    // else{
-    //   alert("Selecione um!!")
-    // }
-  
-    // alert(this.valorAutomovel)
+    if (this.ra == null || this.nome == "" || this.email == "" || this.celular == null) {
+      alert("Os campos não podem retornar vazios");
+    }
+    else {
+      alert(this.nome + " cadastrado com sucesso!");
+      alert("RA: " + this.ra  +
+      "\nNome: " + this.nome +
+      "\nE-mail: " + this.email +
+      "\nCelular: " + this.celular );
+    }
   
   }
   
